@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script>
+        $(document).ready(function() {
+            for (var i = 1 ; i< 719 ; i+=1){
+                x = Math.floor((Math.random() * 717) + 1) 
+            $(".container").prepend("<img src ='http://pokeapi.co/media/img/" + x + ".png'/>");
+            }
+            $('img').click(function(){
+                $(this).hide();
+            })
+            $('.add').click(function(){
+                for (var i = 1 ; i< 5 ; i+=1){
+                    x = Math.floor((Math.random() * 717) + 1) 
+                    $(".container").prepend("<img src ='http://pokeapi.co/media/img/" + x + ".png'/>");
+                }
+            })
+        })
+    </script>
+    <style>
+    .container{
+        background:darkgrey
+    }
+    </style>
+</head>
+  <body>
+      <button class = "add">Add 5</button>
+        <div class = "container"></div>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+  </body>
+</html>
